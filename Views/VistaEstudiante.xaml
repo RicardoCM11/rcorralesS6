@@ -11,12 +11,43 @@
             Padding="25"
              />
         <Label Text=""></Label>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Text="Codigo"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   TextColor="red"></Label>
+
+            <Label Text="Nombre"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    TextColor="red"></Label>
+
+         
+            <Label Text="Apellido"
+                Grid.Row="1"
+                Grid.Column="3"
+                TextColor="red"></Label>
+
+            
+            <Label Text="Edad"
+                Grid.Row="1"
+                Grid.Column="4"
+                TextColor="red"></Label>
+        </Grid>
         <ListView
             x:Name="Listaestudiantes"
+            ItemSelected="Listaestudiantes_ItemSelected"
             >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
+                    <ViewCell> 
 
                         <StackLayout>
 
@@ -26,7 +57,7 @@
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="4*"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 
                                 <Label x:Name="lblcodigo"
@@ -57,6 +88,10 @@
             </ListView.ItemTemplate>
             
         </ListView>
-        
+        <Label Text=""></Label>
+        <Button
+            x:Name="btnagregar"
+            Clicked="btnagregar_Clicked"
+            Text="Agregar Estudiante"></Button>
     </VerticalStackLayout>
 </ContentPage>

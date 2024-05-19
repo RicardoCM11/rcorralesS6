@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="rcorralesS6.Views.VistaActEli"
+             Title="VistaActEli">
+    <VerticalStackLayout
+        Spacing="25">
+        <Label 
+            Text="Actualizar - Eliminar"
+            FontSize="20"
+            HorizontalTextAlignment="Center"></Label>
+        <Entry
+            x:Name="txtcodigo"
+            IsReadOnly="True"
+            ></Entry>
+        <Entry
+            x:Name="txtnombre"
+            Placeholder="Nombre"
+            ></Entry>
+        <Entry
+            x:Name="txtapellido"
+            Placeholder="Apellido"
+            ></Entry>
+        <Entry
+            x:Name="txtedad"
+            Placeholder="Edad"
+            ></Entry>
+
+        <Button
+            x:Name="btnactualizar"
+            Clicked="btnactualizar_Clicked"
+            Text="Actualizar Registro"
+            ></Button>
+
+        <Button
+            x:Name="btneliminar"
+            Clicked="btneliminar_Clicked"
+            Text="Eliminar Registro"
+            ></Button>
+    </VerticalStackLayout>
+</ContentPage>
